@@ -1,0 +1,129 @@
+/* variables */
+:root {
+    /* ### Primary */
+--Cyan: hsl(179, 62%, 43%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+--white:hsla(180, 0%, 100%, 1);
+
+/* ### Neutral */
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Light-Gray);
+    font-family: "Karla", sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--white);
+    padding: .76rem; 
+}
+
+h1, h2, h3 {
+    margin: 0 0 1.5rem 0;
+
+}
+
+h2 {
+    margin-bottom: 1.25rem;
+}
+
+.container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin:  4rem auto;
+    max-width: 40rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+   
+}
+
+.container > * {
+    padding: 1.8rem 2.4rem;
+}
+
+.community {
+    background-color: var(--white);
+    color: var(--Grayish-Blue);
+}
+
+.community h1 {
+    color: var(--Cyan);
+       
+}
+
+.community h3 {
+    color: var(--Bright-Yellow);
+}
+
+.community p {
+    color: var(--Grayish-Blue);
+    font-size: .85rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+    
+}
+
+.subscription {
+    background-color: var(--Cyan);
+    color: var(--Light-Gray);
+    text-align: center;
+}
+
+.subscription span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: .50rem;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: var(--Bright-Yellow);
+    color: var(--white);
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 1.25rem 5rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 3px 8px;
+    border-radius: 0.65rem;  
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+}
+
+.why {
+    background-color: hsl(179, 62%, 48%);
+    color: var(--Light-Gray); 
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--Cyan);
+    font-weight: 700; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 750px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .community {
+        grid-column: 1 / 3;
+    }
+}
